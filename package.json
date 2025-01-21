@@ -1,5 +1,5 @@
 {
-  "name": "26-stu_mongoose-crud", 
+  "name": "26-stu_mongoose-crud",  
   "version": "1.0.0",
   "description": "Reverse engineer developer activity for CRUD methods in Mongoose",
  "main": "server.js",
