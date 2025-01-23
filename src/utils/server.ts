@@ -24,6 +24,13 @@
 
 import express from 'express';
 import db from '../config/connection.ts';
+// Require model
+// import { Thought, User } from '../models/index.ts';
+
+const routes = require('../routes/api/SocialNetworkAPI.ts');
+// const connection = require('../config/connection.ts');
+
+
 
 // Run npm install mongodb and require mongodb and MongoClient class
 // import { MongoClient } from 'mongodb';
@@ -48,6 +55,8 @@ const PORT = process.env.PORT || 3001;
 
 // Built in Express function that parses incoming requests to JSON
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/api', routes);
 
 // Post request to create a single document to collection
 //app.post('/books', async (req, res) => {
