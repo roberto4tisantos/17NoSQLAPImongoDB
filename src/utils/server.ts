@@ -30,13 +30,11 @@ import db from '../config/connection.ts';
 const routes = require('../routes/api/SocialNetworkAPI.ts');
 // const connection = require('../config/connection.ts');
 
-
-
 // Run npm install mongodb and require mongodb and MongoClient class
 // import { MongoClient } from 'mongodb';
 
-const app = express();
 const PORT = process.env.PORT || 3001;
+const app = express();
 
 // Connection string to local instance of MongoDB
 // const connectionStringURI = `mongodb://127.0.0.1:27017`;
@@ -54,8 +52,8 @@ const PORT = process.env.PORT || 3001;
 // const db = client.db(dbName);
 
 // Built in Express function that parses incoming requests to JSON
-app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use('/api', routes);
 
 // Post request to create a single document to collection
