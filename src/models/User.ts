@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+// import { Schema, model, Document } from 'mongoose';
 
 //const mongoose = require('mongoose'); 
 const { Schema } = mongoose; 
@@ -43,5 +44,8 @@ userSchema.virtual('friendCount').get(function () {
   return this.friends.length;
 });
 
+// Uses mongoose.model() to create model
 const User = mongoose.model('User', userSchema);
+
 module.exports = User;
+export default User;

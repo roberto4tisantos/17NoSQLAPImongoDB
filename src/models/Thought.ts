@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+// import { Schema, model, Document } from 'mongoose';
 
 //const mongoose = require('mongoose'); 
 const { Schema } = mongoose; 
@@ -66,5 +67,8 @@ thoughtSchema.virtual('reactionCount').get(function () {
   return this.reactions.length;
 });
 
+// Uses mongoose.model() to create model
 const Thought = mongoose.model('Thought', thoughtSchema);
+
 module.exports = Thought;
+export default Thought;

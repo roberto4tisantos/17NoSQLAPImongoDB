@@ -1,6 +1,8 @@
 //const express = require('express');
 //const mongoose = require('mongoose');
 //import db from '../config/connection.js';
+//import thought from './src/models/Thought.ts';
+//import user from './src/models/User.ts';
 //const routes = require('./routes/api/socialNetworkAPI.js');
 //const connection = require('../config/connection.js');
 //const PORT = process.env.PORT || 3001; 
@@ -15,20 +17,19 @@
 //  });
 //});
 import express from 'express';
-// Run npm install mongodb and require mongodb and MongoClient class
-import { MongoClient } from 'mongodb';
+import db from '../config/connection.ts';
 const app = express();
 const PORT = process.env.PORT || 3001;
 // Connection string to local instance of MongoDB
-const connectionStringURI = `mongodb://127.0.0.1:27017`;
+// const connectionStringURI = `mongodb://127.0.0.1:27017`;
 // Initialize a new instance of MongoClient
-const client = new MongoClient(connectionStringURI);
+// const client = new MongoClient(connectionStringURI);
 // Create variable to hold our database name
-const dbName = 'bootcampUofT';
+// const dbName = 'bootcampUofT';
 // Use connect method to connect to the mongo server
-await client.connect()
-    .catch(err => { console.log(err); });
-//const db = client.db(dbName);
+// await client.connect()
+// .catch(err => {console.log(err)});
+// const db = client.db(dbName);
 // Built in Express function that parses incoming requests to JSON
 app.use(express.json());
 // Post request to create a single document to collection
@@ -79,6 +80,11 @@ app.use(express.json());
 //     res.status(500).json({ error });
 //   }
 // });
-app.listen(PORT, () => {
-    console.log(`Example app listening at http://localhost:${PORT}`);
+// app.listen(PORT, () => {
+//   console.log(`Example app listening at http://localhost:${PORT}`);
+// });
+db.once('open', () => {
+    app.listen(PORT, () => {
+        console.log(`API server running on port ${PORT}!`);
+    });
 });
