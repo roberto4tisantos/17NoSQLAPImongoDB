@@ -1,0 +1,195 @@
+<RENDER>
++ DEPLOY POSTGRESQL and  
+
+https://bootcampspot.instructure.com/courses/6661/assignments/87754?module_item_id=1321265
+
+https://vite.dev/
+
++ Step 1: Initialize the Project Using Vite
+
+	npm create vite@latest environment --template react   
+	npm install vite-plugin-svgr --save-dev
+	npm install vite --save-dev
+	npm install vite@latest
+
+	<Run the following command to check for Node.js processes that might be using Vite:>
+	ps aux | grep node
+
+	<Types>
+	npm install @types/react @types/react-dom --save-dev
+        npm i --save-dev @types/node        
+
+	<JSON WebToken decode>
+	npm install jwt-decode 
+	npm install @types/jwt-decode --save-dev
+
+	(Clear Cache)
+	* rm -rf node_modules/.vite
+
+	cd my-portfolio
+
+	npm install
+	npm run start:dev
+
+	npm bootstrap install
+
+	<SEQUELIZER>
+	npm install --save-dev @types/sequelize
+	
+	<SERVER Install dotenv>
+	npm install dotenv
+
+	<Install TypeScript Type Definitions for dotenv>
+	npm install --save-dev @types/dotenv
+
+	<Force Recompile>
+	npx tsc --build --force
+
+	<Authentication with JSON Web Tokens (JWTs)>
+	https://jwt.io/#debugger
+
+	npm install express body-parser jsonwebtoken bcryptjs
+	npm install jsonwebtoken
+
+	<PostgreSQL>
+	Install-Package Npgsql
+	If you are on a local machine, you can create a simple database and user using the psql shell:
+	# Connect to PostgreSQL as the default postgres user
+
+	psql -U postgres
+	
+	<.env>
+	DB_NAME='kanban_db'
+	DB_USER='postgres'
+	DB_PASSWORD='postgres'
+	JWT_SECRET_KEY=''
+
+	# Create a new database
+	CREATE DATABASE mydb;
+
+	# Create a new user with a password
+	CREATE USER myuser WITH PASSWORD 'mypassword';
+
+	# Grant all privileges on the database to the user
+	GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+
+	<command line Visual Studio>
+
+	$ psql -U postgres
+	Password for user postgres: postgres
+
+	<connect with database "kanban_db">
+	postgres=# \c kanban_db;
+
+ id |     name      | username |        email        |    password
+----+---------------+----------+---------------------+-----------------
+  1 | Alice Johnson | alicej   | alice@example.com   | password_hash_1
+  2 | Bob Smith     | bobsmith | bob@example.com     | password_hash_2
+  3 | Charlie Brown | charlieb | charlie@example.com | password_hash_3
+
+1	SunnyScribe	$2b$10$NiQuqaT5CL78BSkDKYZpE.IAHHnis76eCUkOcNxw5Oi.cSwKW1mz2	2025-01-06 09:43:03.327 -0500	2025-01-06 09:43:03.327 -0500
+2	RadiantComet	$2b$10$920Re0TmK/aJZ.11dv3/8O.MMx6zeebdg.BH4PIBsPb4c/e.E9GOS	2025-01-06 09:43:03.327 -0500	2025-01-06 09:43:03.327 -0500
+3	JollyGuru	$2b$10$GCSArkE3S/sn0Np/sry6xulkVUX25CqzBUgEQVrTbxzv/BMBBkpCi	2025-01-06 09:43:03.326 -0500	2025-01-06 09:43:03.326 -0500
+
+password
+password
+
+git push --set-upstream origin
+
+  public id!: number;
+  public username!: string;
+  public password!: string;
+
+  public readonly createdAt!: Date;
+  public readonly updatedAt!: Date;
+
+
+	<VITE check connections>
+	+ Run the following command to identify which process is using the port (e.g., port 3001):
+		netstat -ano | findstr :3001
+
+	<Vite Debug>
+	+ vite --debug
+
+	++ START SERVER => npm run start
+	++ START CLIENT => npm run dev
+	=> START CLIENT/SERVER => npm run start:dev
+
+	<DELETE ALL JS FILES FROM SERVER SIDE>
+	npm run seed (if is not working create manually)
+	
+	
+			
+
+===========================================================================================
+
+
++ Step 2: Install Required Dependencies
+
+	You’ll need react-router-dom to handle routing and navigation between sections:
+	
+	npm install react-router-dom
+
++ Step 3: Folder Structure
+
+	Here’s the folder structure for the project:
+src/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── Navigation.jsx
+│   ├── Project.jsx
+│   └── Footer.jsx
+│
+├── pages/
+│   ├── AboutMe.jsx
+│   ├── Portfolio.jsx
+│   ├── Contact.jsx
+│   └── Resume.jsx
+│
+├── App.jsx
+└── index.css
+
++ Step 4: Create Components
+
+	1. Header Component (Header.jsx)	
+	The Header component will be used across all pages and will contain the Navigation component.
+
+	2. Navigation Component (Navigation.jsx)
+	This component will handle the navigation links for the different sections using react-router-dom.
+
+	3. Project Component (Project.jsx)
+	This component will be reused in the Portfolio page to display individual projects.
+
+	4. Footer Component (Footer.jsx)
+	The Footer component will contain links to your GitHub, LinkedIn, and other platforms.
+
++ Step 5: Create Pages
+
+	1. About Me Page (AboutMe.jsx)
+	This page will display a brief introduction and a photo of yourself.
+
+	2. Portfolio Page (Portfolio.jsx)
+	The portfolio page will display multiple Project components.
+
+	3. Contact Page (Contact.jsx)
+	This page will contain the contact form with the necessary fields.
+
+	4. Resume Page (Resume.jsx)
+	This page will contain your resume and skills.
+
++ Step 6: Set Up Routing in App.jsx
+	Now, we need to set up routing using react-router-dom in App.jsx.
+
+
+
+
+
+
+
+
+	
+
+
+
+
