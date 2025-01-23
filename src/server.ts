@@ -23,11 +23,11 @@
 //});
 
 import express from 'express';
-import db from '../config/connection.ts';
+import db from './config/connection.ts';
 // Require model
 // import { Thought, User } from '../models/index.ts';
 
-const routes = require('../routes/api/SocialNetworkAPI.ts');
+const routes = require('./routes/api/SocialNetworkAPI.ts');
 // const connection = require('../config/connection.ts');
 
 // Run npm install mongodb and require mongodb and MongoClient class
