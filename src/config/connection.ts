@@ -17,4 +17,4 @@ mongoose.connection.on('error', (err) => {
 // export default connectionString; 
 
 // Export connection 
-export default mongoose.connection;
+export default mongoose.connection; 

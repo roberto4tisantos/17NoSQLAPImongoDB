@@ -1,18 +1,23 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "target": "ES2020" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    // "target": "ES2020" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "ES6" /* Specifies the output language level */,
 
     /* Modules */
-    "rootDir": "src" /* Specify the root folder within your source files. */,
+    "rootDir": "./src" /* Specify the root folder within your source files. */,
 
     /* Emit */
-    "outDir": "dist" /* Specify an output folder for all emitted files. */,
+    // "outDir": "dist" /* Specify an output folder for all emitted files. */,
+    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
     // "noEmitOnError": true /* Disable emitting files if any type checking errors are reported. */
 
     /* Modules */
     "module": "ESNext" /* Specify what module code is generated. */,
-    "moduleResolution": "Bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    // "module": "CommonJS", // Module system used by Node.js
+
+    // "moduleResolution": "Bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
+    "moduleResolution": "Node" /* Specify how TypeScript looks up a file from a given module specifier. */,    
 
     /* JavaScript Support */
     "allowJs": true /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
@@ -34,8 +39,14 @@
     "useUnknownInCatchVariables": true /* Ensure 'unknown' is used for catch clause variables. */,
 
     "allowImportingTsExtensions": true,
-    "noEmit": true
+    "noEmit": true,
     // "emitDeclarationOnly": true
+
+    "skipLibCheck": true,
+    "resolveJsonModule": true,   
+    "declaration": false // Doesn't generate declaration files      
+    
   },
-  "include": ["src"]
+  // "include": ["src"]
+  "include": ["src/**/*.ts"] 
 }

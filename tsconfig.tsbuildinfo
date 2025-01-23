@@ -1,0 +1,1 @@
+{"root":["./src/server.ts","./src/config/connection.ts","./src/models/thought.ts","./src/models/user.ts","./src/models/index.ts","./src/routes/api/socialnetworkapi.ts","./src/utils/seed.ts"],"version":"5.7.3"}
