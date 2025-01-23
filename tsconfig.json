@@ -48,5 +48,5 @@
     
   },
   // "include": ["src"]
-  "include": ["src/**/*.ts"] 
+  "include": ["src/**/*.ts", "src/server.js", "src/routes/api/SocialNetworkAPI.js", "src/models/User.js", "src/models/Thought.js", "src/models/index.js", "src/config/connection.js"] 
 }

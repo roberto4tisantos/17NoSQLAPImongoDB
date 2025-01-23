@@ -49,3 +49,19 @@ const User = mongoose.model('User', userSchema);
 
 module.exports = User;
 export default User;
+export function findByIdAndUpdate(userId, body, arg2) {
+  throw new Error('Function not implemented.');
+}
+
+export function findByIdAndDelete(userId) {
+  throw new Error('Function not implemented.');
+}
+
+export function find() {
+  throw new Error('Function not implemented.');
+}
+
+export function findById(userId) {
+  throw new Error('Function not implemented.');
+}
+

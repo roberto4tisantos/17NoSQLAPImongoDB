@@ -24,7 +24,7 @@ const reactionSchema = new Schema(
       type: Date,
       default: Date.now,
       // @ts-ignore
-      get: (createdAtVal: any) => createdAtVal.toISOString(),
+      get: (createdAtVal) => createdAtVal.toISOString(),
     },
   },
   {
@@ -45,7 +45,7 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (createdAtVal: any) => createdAtVal.toISOString(),
+      get: (createdAtVal) => createdAtVal.toISOString(),
     },
     username: {
       type: String,
@@ -72,3 +72,20 @@ const Thought = mongoose.model('Thought', thoughtSchema);
 
 module.exports = Thought;
 export default Thought; 
+
+export function deleteMany(arg0) {
+  throw new Error('Function not implemented.');
+}
+
+export function find() {
+  throw new Error('Function not implemented.');
+}
+
+export function findById(thoughtId) {
+  throw new Error('Function not implemented.');
+}
+
+export function findByIdAndDelete(thoughtId) {
+  throw new Error('Function not implemented.');
+}
+

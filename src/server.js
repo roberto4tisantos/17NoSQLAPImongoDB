@@ -24,7 +24,7 @@
 
 import express from 'express';
 // import db from './config/connection.ts';
-import db from '../src/config/connection.ts';  // Use the compiled JavaScript file
+import db from './config/connection.ts';  // Use the compiled JavaScript file
 // Require model
 // import { Thought, User } from '../models/index.ts';
 
