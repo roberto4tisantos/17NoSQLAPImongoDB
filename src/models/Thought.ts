@@ -1,4 +1,6 @@
-const mongoose = require('mongoose'); 
+import mongoose from 'mongoose';
+
+//const mongoose = require('mongoose'); 
 const { Schema } = mongoose; 
 
 // Reaction Schema
@@ -20,7 +22,8 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (createdAtVal) => createdAtVal.toISOString(),
+      // @ts-ignore
+      get: (createdAtVal: any) => createdAtVal.toISOString(),
     },
   },
   {
@@ -41,7 +44,7 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (createdAtVal) => createdAtVal.toISOString(),
+      get: (createdAtVal: any) => createdAtVal.toISOString(),
     },
     username: {
       type: String,

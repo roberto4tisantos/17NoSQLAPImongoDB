@@ -6,7 +6,7 @@ const router = express.Router();
 
 // /api/users
 // GET all users
-router.get('/users', async (req, res) => {
+router.get('/users', async (_req, res) => {
   const users = await User.find();
   res.json(users);
 });
@@ -49,7 +49,7 @@ router.post('/thoughts', async (req, res) => {
 });
 
 // GET all thoughts
-router.get('/thoughts', async (req, res) => {
+router.get('/thoughts', async (_req, res) => {
   const thoughts = await Thought.find();
   res.json(thoughts);
 });
