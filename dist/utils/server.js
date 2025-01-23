@@ -28,7 +28,7 @@ const dbName = 'bootcampUofT';
 // Use connect method to connect to the mongo server
 await client.connect()
     .catch(err => { console.log(err); });
-const db = client.db(dbName);
+//const db = client.db(dbName);
 // Built in Express function that parses incoming requests to JSON
 app.use(express.json());
 // Post request to create a single document to collection

@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 
 const express = require('express');
-const User = require('../../models/User'); 
-const Thought = require('../../models/Thought'); 
+const User = require('../../models/User.ts'); 
+const Thought = require('../../models/Thought.ts'); 
 
 const router = express.Router();
 
@@ -79,7 +79,7 @@ router.post('/users/:userId/friends/:friendId', async (_req: Request, res: Respo
 });
 
 // DELETE to remove a friend
-router.delete('/users/:userId/friends/:friendId', async (_req: Request, res: Responses) => {
+router.delete('/users/:userId/friends/:friendId', async (_req: Request, res: Response) => {
   const user = await User.findById(_req.params.userId);
   user.friends.pull(_req.params.friendId);
   await user.save();
@@ -90,7 +90,7 @@ router.delete('/users/:userId/friends/:friendId', async (_req: Request, res: Res
 // POST to create a reaction
 router.post('/thoughts/:thoughtId/reactions', async (_req: Request, res: Response) => {
   const thought = await Thought.findById(_req.params.thoughtId);
-  thought.reactions.push(req.body);
+  thought.reactions.push(_req.body);
   await thought.save();
   res.json(thought);
 });

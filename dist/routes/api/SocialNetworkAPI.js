@@ -1,6 +1,6 @@
 const express = require('express');
-const User = require('../../models/User');
-const Thought = require('../../models/Thought');
+const User = require('../../models/User.ts');
+const Thought = require('../../models/Thought.ts');
 const router = express.Router();
 // /api/users
 // GET all users
@@ -75,7 +75,7 @@ router.delete('/users/:userId/friends/:friendId', async (_req, res) => {
 // POST to create a reaction
 router.post('/thoughts/:thoughtId/reactions', async (_req, res) => {
     const thought = await Thought.findById(_req.params.thoughtId);
-    thought.reactions.push(req.body);
+    thought.reactions.push(_req.body);
     await thought.save();
     res.json(thought);
 });
