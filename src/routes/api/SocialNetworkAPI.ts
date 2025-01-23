@@ -103,4 +103,9 @@ router.delete('/thoughts/:thoughtId/reactions/:reactionId', async (_req: Request
   res.json(thought);
 });
 
+// Export the router
 module.exports = router;
+
+export default router;
+
+
